@@ -16,7 +16,7 @@ class Password {
 public:
 	Password(bool s = false);
 	string getPassword();
-	void generatePass(const short &l);
+	void generatePass(const int &l);
 private:
 	bool validate(); //ensure password complies with general password constraints
 	size_t getMaxCountType();

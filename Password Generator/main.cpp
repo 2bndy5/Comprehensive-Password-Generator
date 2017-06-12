@@ -9,7 +9,7 @@ using std::endl;
 
 int main() {
 	srand(time(NULL)); //seed rand()
-	short length = 8; //Enter password length
+	int length = 8; //Enter password length
 	Password p(true); // pass true to exclude special characters ($%^&)
 	p.generatePass(length);
 	cout << p.getPassword() << endl;

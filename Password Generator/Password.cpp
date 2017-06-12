@@ -13,7 +13,7 @@ string Password::getPassword()
 	return password;
 }
 
-void Password::generatePass(const short & l)
+void Password::generatePass(const int &l)
 {
 	for (int i = 0; i < l; i++) {
 		char temp = rand() % 94 + 33;
@@ -96,7 +96,7 @@ size_t Password::getMaxCountType()
 
 size_t Password::findLastlower()
 {
-	for (int i = password.length() - 1; i >= 0; i--) {
+	for (size_t i = password.length() - 1; i >= 0; i--) {
 		if (islower(password[i]))
 			return i;
 	}
@@ -105,7 +105,7 @@ size_t Password::findLastlower()
 
 size_t Password::findLastDigit()
 {
-	for (int i = password.length() - 1; i >= 0; i--) {
+	for (size_t i = password.length() - 1; i >= 0; i--) {
 		if (isdigit(password[i]))
 			return i;
 	}
@@ -114,7 +114,7 @@ size_t Password::findLastDigit()
 
 size_t Password::findLastUpper()
 {
-	for (int i = password.length() - 1; i >= 0; i--) {
+	for (size_t i = password.length() - 1; i >= 0; i--) {
 		if (isupper(password[i]))
 			return i;
 	}
@@ -123,7 +123,7 @@ size_t Password::findLastUpper()
 
 size_t Password::findLastSpecial()
 {
-	for (int i = password.length() - 1; i >= 0; i--) {
+	for (size_t i = password.length() - 1; i >= 0; i--) {
 		if (isgraph(password[i]))
 			return i;
 	}
